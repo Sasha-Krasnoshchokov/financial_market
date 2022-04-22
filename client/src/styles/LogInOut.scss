@@ -1,0 +1,66 @@
+@import './_general.scss';
+
+.LogInOut {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include flex-centers;
+  width: 100vw;
+  min-height: 100vh;
+
+  &-info {
+    @include flex-centers;
+    flex-direction: column;
+    width: 50%;
+    height: 50%;
+    transform: translateY(-20vh);
+  }
+
+  &-text {
+    width: 100%;
+    margin-bottom: $size-huge;
+    font-size: $size-XL;
+    text-align: center;
+  }
+
+  &-link {
+    width: 50%;
+    height: $size-huge;
+  }
+
+  &-link {
+    position: fixed;
+    right: $size-XL;
+    bottom: $size-XL;
+    width: 12 * $BASE-SIZE;
+    height: $size-huge;
+    border-radius: $size-XXS;
+  }
+}
+
+.form {
+  @include flex-centers;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: $size-huge;
+  font-size: $size-XXL;
+  text-align: center;
+
+  &-input {
+    box-sizing: border-box;
+    @include input-sets;
+    margin-bottom: $size-XL;
+    padding: 0 $size-S;
+    height: $size-huge;
+    font-size: $size-L;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    border-radius: $size-XXS;
+  }
+
+  &-button {
+    width: 100%;
+    height: $size-huge;
+  }
+}

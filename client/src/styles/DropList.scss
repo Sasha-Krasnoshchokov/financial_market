@@ -1,0 +1,75 @@
+@import './_general.scss';
+
+.DropList {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 0 $size-XXS;
+  font-size: $size-XL;
+  overflow: hidden;
+  border-radius: $size-XXS;
+  transition: height $transition-time-M linear;
+  z-index: 2;
+
+  &:hover {
+    cursor: pointer;
+    height: 24 * $BASE-SIZE;
+  }
+
+  &-list {
+    @include flex-centers;
+    flex-direction: column;
+    padding-top: $size-S;
+
+    &-title {
+      margin-bottom: $size-M;
+      letter-spacing: 0.12 * $BASE-SIZE;
+
+      @media (max-width: 480px) {
+        padding: $size-XS;
+      }
+    }
+
+    &-items {
+      box-sizing: border-box;
+      @include flex-sb-centers;
+      flex-direction: column;
+      width: 100%;
+      height: 18 * $BASE-SIZE;
+      padding: $size-S $size-XS;
+      border-radius: $size-XXS;
+      overflow-y: auto;
+    }
+
+    &-item {
+      position: relative;
+      @include button-sets;
+      @include flex-sb-centers;
+      flex-direction: row;
+      margin-bottom: $size-S;
+      padding: $size-S;
+      border-radius: $size-XXS;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &-title {
+        font-size: $size-M;
+        font-weight: 600;
+      }
+    }
+
+    &-checkmark {
+      position: absolute;
+      right: 0;
+      width: 3 * $BASE-SIZE;
+      height: 3 * $BASE-SIZE;
+    }
+  }
+}

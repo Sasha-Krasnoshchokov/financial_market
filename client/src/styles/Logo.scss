@@ -1,0 +1,29 @@
+@import './_general.scss';
+
+.Logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: $size-XXS;
+
+  &-link {
+    width: $size-huge;
+    height: $size-huge;
+    font-size: $size-M;
+    font-weight: 700;
+
+    @media (max-width:480px) {
+      font-size: $size-XS;
+    }
+  }
+
+  &-light:hover {
+    color: $actions-light-color;
+  }
+
+  &-dark:hover {
+    color: $actions-color;
+  }
+}
+

@@ -1,0 +1,87 @@
+@import './_general.scss';
+
+.News {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 8 * $BASE-SIZE;
+  padding-bottom: 8 * $BASE-SIZE;
+
+  &-info {
+    position: relative;
+    display: flex;
+    width: 90%;
+    height: 25vh;
+    margin-bottom: $size-XXL;
+
+    &-wrapper {
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+
+      &:hover {
+        z-index: 2;
+      }
+    }
+  }
+
+  &-section {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 2 * $BASE-SIZE;
+    overflow: hidden;
+    transition: height 1s linear;
+    border-radius: $size-M;
+
+    &:hover {
+      cursor: pointer;
+      height: 40vh;
+      overflow-y: auto;
+    }
+  }
+
+  &-text {
+    margin-bottom: $size-huge;
+    font-size: 3 * $BASE-SIZE;
+    text-align: center;
+  }
+
+  &-backhome {
+    position: fixed;
+    right: $size-XL;
+    bottom: $size-XL;
+    width: 12 * $BASE-SIZE;
+    height: $size-huge;
+    border-radius: $size-XXS;
+  }
+}
+
+.treadmill {
+  position: fixed;
+  top: 0;
+  @include flex-centers;
+  width: 100vw;
+  height: 6 * $BASE-SIZE;
+  font-size: 3 * $BASE-SIZE;
+  text-align: center;
+  z-index: 5;
+
+  &-text {
+    box-sizing: border-box;
+    margin-right: $size-S;
+    padding: $size-XXS $size-XXS;
+    font-size: $size-L;
+    border-radius: $size-XXS;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media (max-width: 769px) {
+      padding: $size-S $size-M;
+      font-size: $size-M;
+    }
+  }
+}

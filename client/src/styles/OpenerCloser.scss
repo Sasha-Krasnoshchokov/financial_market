@@ -1,0 +1,70 @@
+@import './_general.scss';
+
+.OpenerCloser {
+  display: none;
+
+  @media (max-width: 769px) {
+    @include flex-centers;
+    flex-direction: row;
+    width: $size-huge;
+    height: $size-huge;
+    border-radius: $size-XXS;
+  }
+}
+
+.button {
+  @include button-sets;
+  @include flex-centers;
+  flex-direction: row;
+
+  &-icon {
+    width: 90%;
+    height: 90%;
+    background-repeat: no-repeat;
+  }
+
+  &-opener {
+    &--light {
+      background-image: url(../assets/menu-opener/dark.svg);
+
+      &:hover {
+        cursor: pointer;
+        background-image: url(../assets/menu-opener/dark-hover.svg);
+      }
+    }
+
+    &--dark {
+      background-image: url(../assets/menu-opener/light.svg);
+
+      &:hover {
+        cursor: pointer;
+        background-image: url(../assets/menu-opener/light-hover.svg);
+      }
+    }
+  }
+
+  &-closer {
+    position: absolute;
+    top: 2 * $BASE-SIZE;
+    right: $size-L;
+
+    &--light {
+      background-image: url(../assets/closer/dark.svg);
+
+      &:hover {
+        cursor: pointer;
+        background-image: url(../assets/closer/dark-hover.svg);
+      }
+    }
+
+    &--dark {
+      background-image: url(../assets/closer/light.svg);
+
+      &:hover {
+        cursor: pointer;
+        background-image: url(../assets/closer/light-hover.svg);
+      }
+    }
+  }
+
+}

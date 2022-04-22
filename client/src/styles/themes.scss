@@ -1,0 +1,23 @@
+@import './_general.scss';
+
+.theme {
+  &-dark {
+    color: $light-color;
+    background-color: $dark-color;
+    box-shadow: 0 0 $size-S $light-color;
+
+    &:hover {
+      box-shadow: 0 0 $size-S $actions-color;
+    }
+  }
+  
+  &-light {
+    color: $dark-color;
+    background-color: $light-color;
+    box-shadow: 0 0 $size-S $dark-color;
+
+    &:hover {
+      box-shadow: 0 0 $size-S $actions-light-color;
+    }
+  }
+}
